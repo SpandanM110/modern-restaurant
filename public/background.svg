@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#2D3748"/>
+  
+  <!-- Abstract patterns -->
+  <circle cx="100" cy="100" r="80" fill="#4A5568" opacity="0.5"/>
+  <circle cx="700" cy="500" r="120" fill="#4A5568" opacity="0.3"/>
+  
+  <!-- Decorative elements -->
+  <path d="M0 300 Q 400 200 800 300" stroke="#A0AEC0" fill="none" stroke-width="2" opacity="0.2"/>
+  <path d="M0 320 Q 400 220 800 320" stroke="#A0AEC0" fill="none" stroke-width="2" opacity="0.2"/>
+  
+  <!-- Additional ambient elements -->
+  <circle cx="200" cy="400" r="40" fill="#4A5568" opacity="0.4"/>
+  <circle cx="600" cy="200" r="60" fill="#4A5568" opacity="0.3"/>
+</svg>

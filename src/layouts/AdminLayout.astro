@@ -1,0 +1,47 @@
+---
+import Layout from './Layout.astro';
+
+const { title } = Astro.props;
+---
+
+<Layout title={title}>
+  <div class="flex min-h-screen bg-gray-100">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white shadow-md">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-gray-800">Admin Panel</h2>
+      </div>
+      <nav class="mt-4">
+        
+          href="/admin/dashboard"
+          class="block px-4 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-500"
+        >
+          Dashboard
+        </a>
+        
+          href="/admin/menu"
+          class="block px-4 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-500"
+        >
+          Menu Management
+        </a>
+        
+          href="/admin/reservations"
+          class="block px-4 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-500"
+        >
+          Reservations
+        </a>
+        
+          href="/admin/settings"
+          class="block px-4 py-2 text-gray-600 hover:bg-orange-50 hover:text-orange-500"
+        >
+          Settings
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-8">
+      <slot />
+    </main>
+  </div>
+</Layout>

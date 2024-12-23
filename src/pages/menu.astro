@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const menuCategories = [
+  {
+    name: "Starters",
+    items: [
+      { name: "Caprese Salad", description: "Fresh mozzarella, tomatoes, and basil", price: 12.99 },
+      { name: "Bruschetta", description: "Toasted bread with tomatoes and garlic", price: 10.99 },
+      { name: "Seafood Soup", description: "Mixed seafood in rich broth", price: 14.99 }
+    ]
+  },
+  {
+    name: "Main Courses",
+    items: [
+      { name: "Grilled Salmon", description: "Fresh Atlantic salmon with herbs", price: 24.99 },
+      { name: "Beef Tenderloin", description: "Prime cut beef with wine reduction", price: 32.99 },
+      { name: "Truffle Risotto", description: "Creamy Arborio rice with truffle", price: 22.99 }
+    ]
+  },
+  {
+    name: "Desserts",
+    items: [
+      { name: "Tiramisu", description: "Classic Italian dessert", price: 8.99 },
+      { name: "Chocolate Fondant", description: "Warm chocolate cake with ice cream", price: 9.99 },
+      { name: "Crème Brûlée", description: "Classic French vanilla custard", price: 8.99 }
+    ]
+  }
+];
+---
+
+<Layout title="Menu - Savoria">
+  <div class="container mx-auto px-6 py-12">
+    <h1 class="text-4xl font-bold text-center mb-12">Our Menu</h1>
+
+    {menuCategories.map(category => (
+      <div class="mb-12">
+        <h2 class="text-2xl font-semibold mb-6 text-orange-500">{category.name}</h2>
+        <div class="grid gap-6">
+          {category.items.map(item => (
+            <div class="bg-white rounded-lg shadow-md p-6">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="text-xl font-medium">{item.name}</h3>
+                  <p class="text-gray-600 mt-1">{item.description}</p>
+                </div>
+                <span class="text-orange-500 font-semibold">${item.price}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</Layout>

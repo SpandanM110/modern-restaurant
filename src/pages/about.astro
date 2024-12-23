@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About Us - Savoria">
+  <div class="container mx-auto px-6 py-12">
+    <h1 class="text-4xl font-bold text-center mb-12">About Savoria</h1>
+
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <img
+          src="/restaurant-interior.svg" 
+          alt="Restaurant Interior"
+          class="rounded-lg shadow-lg"
+        />
+      </div>
+      <div>
+        <h2 class="text-2xl font-semibold mb-4">Our Story</h2>
+        <p class="text-gray-600 mb-4">
+          Founded in 2020, Savoria brings together the finest ingredients and culinary expertise
+          to create an unforgettable dining experience. Our passion for excellence drives
+          everything we do, from selecting the freshest ingredients to crafting innovative dishes
+          that delight our guests.
+        </p>
+        <p class="text-gray-600 mb-4">
+          Our team of expert chefs combines traditional techniques with modern creativity,
+          resulting in dishes that are both familiar and exciting. We believe in sustainable
+          practices and work closely with local suppliers to ensure the highest quality
+          ingredients while supporting our community.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-16">
+      <h2 class="text-2xl font-semibold text-center mb-8">Our Team</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <img
+            src="/chef-1.svg" 
+            alt="Head Chef"
+            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover bg-gray-100"
+          />
+          <h3 class="font-semibold">John Doe</h3>
+          <p class="text-gray-600">Head Chef</p>
+        </div>
+        <div class="text-center">
+          <img
+            src="/chef-1.svg"
+            alt="Sous Chef"
+            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover bg-gray-100"
+          />
+          <h3 class="font-semibold">Jane Smith</h3>
+          <p class="text-gray-600">Sous Chef</p>
+        </div>
+        <div class="text-center">
+          <img
+            src="/chef-1.svg" 
+            alt="Pastry Chef"
+            class="w-32 h-32 rounded-full mx-auto mb-4 object-cover bg-gray-100"
+          />
+          <h3 class="font-semibold">Mike Johnson</h3>
+          <p class="text-gray-600">Pastry Chef</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

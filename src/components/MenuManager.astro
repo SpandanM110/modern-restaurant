@@ -1,0 +1,130 @@
+---
+// Menu categories and items
+const menuCategories = [
+  {
+    id: 'starters',
+    name: 'Starters',
+    items: [
+      {
+        id: 1,
+        name: 'Caprese Salad',
+        description: 'Fresh mozzarella, tomatoes, and basil',
+        price: 12.99,
+        image: '/menu-1.svg'
+      },
+      {
+        id: 2,
+        name: 'Bruschetta',
+        description: 'Toasted bread with tomatoes and garlic',
+        price: 10.99,
+        image: '/menu-2.svg'
+      }
+    ]
+  },
+  {
+    id: 'main-courses',
+    name: 'Main Courses',
+    items: [
+      {
+        id: 3,
+        name: 'Grilled Salmon',
+        description: 'Fresh Atlantic salmon with herbs',
+        price: 24.99,
+        image: '/menu-3.svg'
+      },
+      {
+        id: 4,
+        name: 'Beef Tenderloin',
+        description: 'Prime cut beef with wine reduction',
+        price: 32.99,
+        image: '/menu-4.svg'
+      }
+    ]
+  }
+];
+---
+
+<div class="container mx-auto px-6 py-12">
+  <div class="flex justify-between items-center mb-8">
+    <h2 class="text-3xl font-bold">Menu Management</h2>
+    <button
+      id="addItemBtn"
+      class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition"
+    >
+      Add New Item
+    </button>
+  </div>
+
+  {menuCategories.map(category => (
+    <div class="mb-12">
+      <h3 class="text-2xl font-semibold mb-6">{category.name}</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {category.items.map(item => (
+          <div class="bg-white rounded-lg shadow-md p-6">
+            <img
+              src={item.image}
+              alt={item.name}
+              class="w-full h-48 object-cover mb-4 rounded-lg"
+            />
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <h4 class="text-xl font-semibold">{item.name}</h4>
+                <p class="text-gray-600">{item.description}</p>
+              </div>
+              <span class="text-orange-500 font-bold">${item.price}</span>
+            </div>
+            <div class="flex space-x-2">
+              <button
+                class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition"
+                data-id={item.id}
+              >
+                Edit
+              </button>
+              <button
+                class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition"
+                data-id={item.id}
+              >
+                Delete
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>
+
+<script>
+  // Add event listeners for the menu management buttons
+  document.addEventListener('DOMContentLoaded', () => {
+    // Edit button handler
+    document.querySelectorAll('button[data-id]').forEach(button => {
+      button.addEventListener('click', (e) => {
+        const id = e.currentTarget.dataset.id;
+        if (e.currentTarget.textContent.trim() === 'Edit') {
+          handleEdit(id);
+        } else if (e.currentTarget.textContent.trim() === 'Delete') {
+          handleDelete(id);
+        }
+      });
+    });
+
+    // Add new item handler
+    document.getElementById('addItemBtn')?.addEventListener('click', handleAdd);
+  });
+
+  function handleEdit(id) {
+    // Implement edit functionality
+    console.log('Editing item:', id);
+  }
+
+  function handleDelete(id) {
+    if (confirm('Are you sure you want to delete this item?')) {
+      console.log('Deleting item:', id);
+    }
+  }
+
+  function handleAdd() {
+    console.log('Adding new item');
+  }
+</script>

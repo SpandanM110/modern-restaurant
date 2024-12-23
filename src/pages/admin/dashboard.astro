@@ -1,0 +1,38 @@
+---
+import AdminLayout from '../../layouts/AdminLayout.astro';
+---
+
+<AdminLayout title="Admin Dashboard">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+    <div class="bg-white p-6 rounded-lg shadow-md">
+      <h3 class="text-lg font-semibold mb-2">Today's Reservations</h3>
+      <p class="text-3xl font-bold text-orange-500">12</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-md">
+      <h3 class="text-lg font-semibold mb-2">Active Menu Items</h3>
+      <p class="text-3xl font-bold text-orange-500">24</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-md">
+      <h3 class="text-lg font-semibold mb-2">Total Revenue</h3>
+      <p class="text-3xl font-bold text-orange-500">$1,234</p>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- Recent Reservations -->
+    <div class="bg-white p-6 rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mb-4">Recent Reservations</h3>
+      <div class="space-y-4">
+        {/* Add recent reservations list */}
+      </div>
+    </div>
+
+    <!-- Popular Items -->
+    <div class="bg-white p-6 rounded-lg shadow-md">
+      <h3 class="text-xl font-semibold mb-4">Popular Menu Items</h3>
+      <div class="space-y-4">
+        {/* Add popular items list */}
+      </div>
+    </div>
+  </div>
+</AdminLayout>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Background -->
+  <circle cx="100" cy="100" r="100" fill="#4A5568"/>
+  
+  <!-- Chef hat -->
+  <path d="M60 80 Q100 40 140 80" fill="#F7FAFC"/>
+  <rect x="60" y="80" width="80" height="20" fill="#F7FAFC"/>
+  
+  <!-- Face outline -->
+  <circle cx="100" cy="120" r="30" fill="#F7FAFC"/>
+  
+  <!-- Chef coat -->
+  <path d="M60 150 Q100 180 140 150 L140 200 L60 200 Z" fill="#F7FAFC"/>
+</svg>

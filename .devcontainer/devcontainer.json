@@ -1,0 +1,16 @@
+{
+    "name": "Restaurant Website",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "web",
+    "workspaceFolder": "/app",
+    "forwardPorts": [3000, 5432],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "astro-build.astro-vscode",
+                "bradlc.vscode-tailwindcss",
+                "Prisma.prisma"
+            ]
+        }
+    }
+}

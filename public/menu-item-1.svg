@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <!-- Plate -->
+  <ellipse cx="200" cy="150" rx="150" ry="100" fill="#F7FAFC"/>
+  <ellipse cx="200" cy="150" rx="140" ry="90" fill="#EDF2F7"/>
+  
+  <!-- Beef -->
+  <path d="M120 130 Q200 100 280 130 Q200 160 120 130" fill="#C53030"/>
+  
+  <!-- Wine reduction -->
+  <path d="M160 160 Q200 180 240 160" fill="#742A2A" opacity="0.7"/>
+  <path d="M170 170 Q200 190 230 170" fill="#742A2A" opacity="0.5"/>
+  
+  <!-- Garnish -->
+  <circle cx="140" cy="180" r="10" fill="#48BB78"/>
+  <circle cx="260" cy="180" r="10" fill="#48BB78"/>
+</svg>
