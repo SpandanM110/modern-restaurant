@@ -1,7 +1,10 @@
 version: '3'
 services:
   web:
-    build: .
+    container_name: modern-restaurant-web
+    build: 
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
     volumes:
@@ -10,7 +13,9 @@ services:
       DATABASE_URL: postgresql://postgres:postgres@db:5432/restaurant_db
     depends_on:
       - db
+
   db:
+    container_name: modern-restaurant-db
     image: postgres:14
     environment:
       POSTGRES_USER: postgres
